@@ -10,9 +10,16 @@ Usage in Ansible 2.0
 
 This plugin is included in Ansible 2.0, and can be enabled by adding this line to `ansible.cfg`
 
+ 
 .. code-block:: bash
 
-    callback_whitelist = profile_tasks
+    vim /etc/ansible/ansible.cfg 
+    #callback_whitelist = timer, mail 
+    修改为
+    callback_whitelist = timer, profile_tasks
+ 
+    查看可用参数
+    ansible-doc -t callback -l 
 
 Usage in Ansible 1.x
 ^^^^^^^^^^^^^^^^^^^^
